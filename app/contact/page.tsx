@@ -102,8 +102,7 @@ export default function ContactPage() {
                     </h3>
                     <a
                       href="tel:02315315195"
-                      className="font-nunito text-lg sm:text-xl text-white hover:underline block font-semibold"
-                      style={{ color: "#cda757" }}
+                      className="font-nunito text-lg sm:text-xl text-white hover:text-[#cda757] hover:underline block font-semibold transition-colors"
                     >
                       0231 5315195
                     </a>
@@ -145,8 +144,7 @@ export default function ContactPage() {
                       href="https://www.instagram.com/maharaja.theroyals"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-nunito text-base sm:text-lg hover:underline"
-                      style={{ color: "#cda757" }}
+                      className="font-nunito text-base sm:text-lg text-white hover:text-[#cda757] hover:underline transition-colors"
                     >
                       @maharaja.theroyals
                     </a>

@@ -10,6 +10,7 @@ export type MenuItem = {
   isVeg?: boolean;
   isVegan?: boolean;
   isNonVeg?: boolean;
+  image?: string;
 };
 
 export type DietaryType = "vegan" | "veg" | "non-veg";

@@ -82,7 +82,6 @@ body {
 .font-cinzel { font-family: var(--font-inria); }
 .font-cinzel-decorative { font-family: var(--font-inria); }
 .font-cormorant { font-family: var(--font-nunito); }
-.font-script { font-family: 'Caveat', 'Playfair Display', 'Brush Script MT', cursive, serif; }
 
 .gold-text {
   color: #cda757;
@@ -99,6 +98,29 @@ body {
 /* Nakasi corner base */
 .nakasi-wrapper {
   position: relative;
+}
+
+/* Infinite Smooth Marquee with Pause on Hover */
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover,
+.group:hover .animate-marquee-infinite,
+.marquee-paused {
+  animation-play-state: paused !important;
 }
 
 /* Smooth image transitions */
