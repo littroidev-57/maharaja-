@@ -82,6 +82,7 @@ body {
 .font-cinzel { font-family: var(--font-inria); }
 .font-cinzel-decorative { font-family: var(--font-inria); }
 .font-cormorant { font-family: var(--font-nunito); }
+.font-script { font-family: 'Caveat', 'Playfair Display', 'Brush Script MT', cursive, serif; }
 
 .gold-text {
   color: #cda757;
