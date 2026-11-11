@@ -243,34 +243,34 @@ export default function MenuPage() {
       {/* 1. HERO HEADER: Blurred Ambiance with Royal Typography       */}
       {/* ============================================================ */}
       <header className="relative pt-36 sm:pt-44 pb-16 sm:pb-20 px-4 overflow-hidden bg-[#260000] text-white">
-        {/* Background image with blur effect */}
+        {/* Background image with minimal blur */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
-            src="/images/4-1370x550.jpg"
+            src="/images/hero-maharaja.jpg"
             alt="Maharaja The Royals Ambiance"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center scale-110 filter blur-[8px] sm:blur-[12px] opacity-35 brightness-[0.7]"
+            className="object-cover object-center scale-102 filter blur-[1.5px] sm:blur-[2px] brightness-[0.9]"
           />
-          {/* Deep royal maroon gradient overlays for contrast & warmth */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0000]/85 via-[#4a0101]/80 to-[#260000]/95" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(205,167,87,0.18),transparent_70%)]" />
+          {/* Subtle balanced dark overlay: keeps image sharp & clear while ensuring text contrast */}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#4a0101]/25 to-[#1a0000]/80" />
         </div>
 
         {/* Header Content */}
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <p className="tracking-[0.35em] uppercase text-xs mb-3 font-inria font-semibold text-[#cda757] drop-shadow-sm">
+          <p className="tracking-[0.35em] uppercase text-xs mb-3 font-inria font-semibold text-[#f7b800] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             {t.menuPageSubtitle}
           </p>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inria tracking-tight text-white mb-4 drop-shadow-md">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inria tracking-tight text-white mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]">
             {t.menuPageTitle}
           </h1>
 
           <NakasiDivider color="gold" />
 
-          <p className="text-white/90 text-base sm:text-lg font-nunito font-normal max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-sm">
+          <p className="text-white text-base sm:text-lg font-nunito font-normal max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
             {t.menuPageDesc}
           </p>
 
