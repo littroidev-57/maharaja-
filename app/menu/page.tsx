@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { NakasiDivider } from "@/components/ui/NakasiDivider";
 import { RoyalButton } from "@/components/ui/RoyalButton";
@@ -239,25 +240,39 @@ export default function MenuPage() {
   return (
     <div className="min-h-screen bg-[#faf8f5] text-[#2b0b0b]">
       {/* ============================================================ */}
-      {/* 1. HERO HEADER: Pure Typographic Royal Grandeur              */}
+      {/* 1. HERO HEADER: Blurred Ambiance with Royal Typography       */}
       {/* ============================================================ */}
-      <header className="relative pt-36 sm:pt-44 pb-14 sm:pb-16 px-4 bg-[#4a0101] text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="tracking-[0.35em] uppercase text-xs mb-3 font-inria font-semibold text-[#cda757]">
+      <header className="relative pt-36 sm:pt-44 pb-16 sm:pb-20 px-4 overflow-hidden bg-[#260000] text-white">
+        {/* Background image with blur effect */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <Image
+            src="/images/4-1370x550.jpg"
+            alt="Maharaja The Royals Ambiance"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center scale-110 filter blur-[8px] sm:blur-[12px] opacity-35 brightness-[0.7]"
+          />
+          {/* Deep royal maroon gradient overlays for contrast & warmth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0000]/85 via-[#4a0101]/80 to-[#260000]/95" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(205,167,87,0.18),transparent_70%)]" />
+        </div>
+
+        {/* Header Content */}
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <p className="tracking-[0.35em] uppercase text-xs mb-3 font-inria font-semibold text-[#cda757] drop-shadow-sm">
             {t.menuPageSubtitle}
           </p>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inria tracking-tight text-white mb-4">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inria tracking-tight text-white mb-4 drop-shadow-md">
             {t.menuPageTitle}
           </h1>
 
           <NakasiDivider color="gold" />
 
-          <p className="text-white/85 text-base sm:text-lg font-nunito font-normal max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-white/90 text-base sm:text-lg font-nunito font-normal max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-sm">
             {t.menuPageDesc}
           </p>
-
-
 
           {/* Action CTAs */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
