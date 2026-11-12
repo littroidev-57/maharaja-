@@ -64,8 +64,7 @@ export function GallerySection() {
           {previewImages.map((img, i) => (
             <motion.div
               key={img.src}
-              className="break-inside-avoid overflow-hidden border cursor-pointer transition-all duration-300 group relative bg-[#4a0101] shadow-md"
-              style={{ borderColor: "rgba(205, 167, 87, 0.35)" }}
+              className="break-inside-avoid overflow-hidden cursor-pointer transition-all duration-300 group relative shadow-md"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -90,8 +90,7 @@ export default function GalleryPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="break-inside-avoid group relative overflow-hidden bg-[#4a0101] border hover:border-[#cda757] cursor-pointer transition-all duration-300 shadow-md"
-                style={{ borderColor: "rgba(205, 167, 87, 0.35)" }}
+                className="break-inside-avoid group relative overflow-hidden cursor-pointer transition-all duration-300 shadow-md"
                 onClick={() => openLightbox(i)}
               >
                 <Image
